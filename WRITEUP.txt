@@ -1,0 +1,38 @@
+/**************************************************************/
+/* Hailey Campbell                                            */
+/* Login ID: 018392504                                        */
+/* CS 3310, Spring 2026                                       */
+/* Programming Assignment 2                                   */
+/* WRITEUP.txt: answer to question                            */
+/**************************************************************/
+
+a) What is the theoretical worst-case running time of the algorithm you implemented
+(i.e. in Θ-notation), expressed in terms of the number of words n in the input
+file? Justify your answer.
+
+Theta (n)
+
+n: the number of words in the input file
+L: the maximum length of any word
+
+For each of the n words, the program:
+- Reads the word from the file and stores it in a list — this is Theta (1) per word 
+  for control flow, plus Theta (L) to copy the characters.
+
+- Normalizes the word by scanning its characters and keeping only letters — this is Theta (L).
+
+- Converts the normalized word to lowercase — this is also Theta (L).
+
+- Sorts the characters of the normalized word to form the anagram key — this is Theta (L log L).
+
+- Inserts the word into a hash-based map under that key — expected Theta (1) per insertion.
+
+The dominant cost per word is the sorting step, which is Theta (L log L). All other operations  
+are at most Theta (L), which is asymptotically smaller than Theta (L\log L) for L>1.
+
+Therefore, over all n words, the total worst-case running time of the algorithm is:
+Theta (n L\log L)
+
+Overall, the running time simplifies to:
+Theta (n)
+
