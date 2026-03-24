@@ -1,21 +1,9 @@
-/**************************************************************/
-/* Hailey Campbell                                            */
-/* Login ID: 018392504                                        */
-/* CS 3310, Spring 2026                                       */
-/* Programming Assignment 2                                   */
-/* Description:                                               */
-/* This program identifies all sets of anagrams within a      */
-/* user‑supplied word list. The input file contains one word  */
-/* per line, and the program processes these words in a       */
-/* case‑insensitive manner while preserving their original    */
-/* spelling and punctuation for output. To efficiently detect */
-/* anagrams—even in large dictionary files—the program uses a */
-/* presorting technique: each word is normalized, converted   */
-/* to lowercase, stripped of non‑letter characters for        */
-/* comparison, and then its letters are sorted to produce a   */
-/* canonical “signature.” Words that share the same signature */
-/* belong to the same anagram group.                          */
-/**************************************************************/
+ Hailey Campbell                                            
+Login ID: 018392504                                        
+CS 3310, Spring 2026                                       
+Programming Assignment 2                                   
+Description: This program identifies all sets of anagrams within a user‑supplied word list. The input file contains one word per line, and the program processes these words in a case‑insensitive manner while preserving their original spelling and punctuation for output. To efficiently detect anagrams—even in large dictionary files—the program uses a presorting technique: each word is normalized, converted to lowercase, stripped of non‑letter characters for comparison, and then its letters are sorted to produce a canonical “signature.” Words that share the same signature belong to the same anagram group.
+
 
 1. FILES INCLUDED
 
@@ -39,11 +27,11 @@ To compile the program, open a terminal in that directory and run:
 javac *.java
 
 
-3. EXICUTION INSTRUCTIONS
+3. EXECUTION INSTRUCTIONS
 
 Running the Program
 The program requires one command‑line argument:
-the name of the file containing the list of words.
+The name of the file containing the list of words.
 Run the program using:
 
 java Prog2 <filename>
@@ -78,7 +66,6 @@ The program prints only sets of two or more words that are true anagrams of each
 Example output:
 
 Detected Anagram Sets:
---------------------------------
 [Elvis, lives]
 [silent, listen]
 
